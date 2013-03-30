@@ -82,6 +82,14 @@ info.
   * run the tests from console with [Testacular](vojtajina.github.com/testacular) via
     `scripts/e2e-test.sh` or `script/e2e-test.bat`
 
+### Continuous Integration
+
+CloudBees have provided a CI/deployment setup:
+
+<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
+
+If you run this, you will get a cloned version of this repo to start working on in a private git repo, 
+along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
 
 ### Receiving updates from upstream
 
@@ -96,18 +104,20 @@ fetch the changes and merge them into your project with git.
         app.css         --> default stylesheet
       img/              --> image files
       index.html        --> app layout file (the main html template file of the app)
+      index-async.html  --> just like index.html, but loads js files asynchronously
       js/               --> javascript files
+        app.js          --> application
         controllers.js  --> application controllers
+        directives.js   --> application directives
         filters.js      --> custom angular filters
         services.js     --> custom angular services
-        widgets.js      --> custom angular widgets
       lib/              --> angular and 3rd party javascript libraries
         angular/
-          angular.js            --> the latest angular js
-          angular.min.js        --> the latest minified angular js
-          angular-*.js  --> angular add-on modules
-          version.txt           --> version number
-      partials/         --> angular view partials (partial html templates)
+          angular.js        --> the latest angular js
+          angular.min.js    --> the latest minified angular js
+          angular-*.js      --> angular add-on modules
+          version.txt       --> version number
+      partials/             --> angular view partials (partial html templates)
         partial1.html
         partial2.html
 
@@ -132,6 +142,9 @@ fetch the changes and merge them into your project with git.
           version.txt           --> version file
       unit/                     --> unit level specs/tests
         controllersSpec.js      --> specs for controllers
+        directivessSpec.js      --> specs for directives
+        filtersSpec.js          --> specs for filters
+        servicesSpec.js         --> specs for services
 
 ## Contact
 
